@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Generar Reporte de Tareas</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Generar Reporte de Tareas</h1>
+    <form action="#" th:action="@{/reporte}" method="post">
+        <label for="fechaInicio">Fecha Inicio:</label>
+        <input type="date" id="fechaInicio" name="fechaInicio" th:value="${#dates.format(fechaInicio, 'yyyy-MM-dd')}">
+        <label for="fechaFin">Fecha Fin:</label>
+        <input type="date" id="fechaFin" name="fechaFin" th:value="${#dates.format(fechaFin, 'yyyy-MM-dd')}">
+        <button type="submit">Generar Reporte</button>
+    </form>
+</body>
+</html>
